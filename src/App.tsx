@@ -1,58 +1,10 @@
-```react
-import React, { useState, useEffect } from 'react';
-import { initializeApp } from 'firebase/app';
-import { getAuth, signInAnonymously, onAuthStateChanged } from 'firebase/auth';
-import type { User, AuthError } from 'firebase/auth';
-import { getFirestore, collection, addDoc, deleteDoc, doc, onSnapshot, getDocs } from 'firebase/firestore';
-import type { QuerySnapshot, FirestoreError } from 'firebase/firestore';
-
-// ---------------------------------------------------------
-// 1. CONFIGURAÇÃO DO FIREBASE (Suas Credenciais)
-// ---------------------------------------------------------
-const firebaseConfig = {
-  apiKey: "AIzaSyAhiyFj4ZdrEHZV6l_MsvSKDU3ZNXrGYy4",
-  authDomain: "listasdepresenca-2f0d1.firebaseapp.com",
-  projectId: "listasdepresenca-2f0d1",
-  storageBucket: "listasdepresenca-2f0d1.firebasestorage.app",
-  messagingSenderId: "383117663865",
-  appId: "1:383117663865:web:20c2072fc745ddb8fdfea8"
-};
-
-const app = initializeApp(firebaseConfig);
+ );
 const auth = getAuth(app);
 const db = getFirestore(app);
 
 // ---------------------------------------------------------
 // 2. BANCO DE DADOS DE FESTAS (Temas, Cores e Senhas)
-// ---------------------------------------------------------
-const THEMES = {
-  'luiza-monica': {
-    id: 'luiza-monica',
-    title: 'Luíza em A Turma da Mônica',
-    age: '5 ANOS',
-    date: '13/06/2026',
-    time: '19:00 às 23:00',
-    location: 'Buffet Cata-Vento - Ipiranga',
-    bgColor: '#fef08a', 
-    primaryColor: '#ef4444', 
-    secondaryColor: '#38bdf8', 
-    message: '"Olá! Esta data vai ser muito importante, e eu espero você para comemorar e brincar comigo!"',
-    adminUser: 'luiza',       // LOGIN DOS PAIS
-    adminPass: '@14062021'    // SENHA DOS PAIS
-  },
-  'joao-safari': {
-    id: 'joao-safari',
-    title: 'O Grande Safári do João',
-    age: '3 ANOS',
-    date: '20/10/2026',
-    time: '14:00 às 18:00',
-    location: 'Espaço Selva Feliz',
-    bgColor: '#dcfce7', 
-    primaryColor: '#15803d', 
-    secondaryColor: '#ca8a04', 
-    message: '"Prepare o seu binóculo! Vamos explorar a selva juntos no meu aniversário!"',
-    adminUser: 'joao',        // LOGIN DOS PAIS
-    adminPass: 'safari123'    // SENHA DOS PAIS
+'    // SENHA DOS PAIS
   },
   'sofia-frozen': {
     id: 'sofia-frozen',
@@ -67,7 +19,7 @@ const THEMES = {
     message: '"Você quer brincar na neve? A porta já está aberta para a minha festa mágica!"',
     adminUser: 'sofia',       // LOGIN DOS PAIS
     adminPass: 'frozen2026'   // SENHA DOS PAIS
-  }
+N }
 };
 
 interface Guest {
@@ -382,12 +334,12 @@ function PartyInviteView({ partyId, onClose, currentUser }: { partyId: string, o
 
       {/* Botão Apenas de Teste (Pode remover depois) */}
       <button onClick={onClose} className="absolute top-4 right-4 bg-white/80 border-2 border-black rounded-full px-3 py-1 text-xs font-bold z-10 shadow-[2px_2px_0px_#000]">
-        ✕ Voltar
+       ✕ Voltar
       </button>
     </div>
   );
 }
+ 
 
-
-```
+```:
 
